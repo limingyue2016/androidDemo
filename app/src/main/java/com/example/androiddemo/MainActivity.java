@@ -1,7 +1,9 @@
 package com.example.androiddemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.androiddemo.activity.SecondActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -12,6 +14,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +37,21 @@ public class MainActivity extends AppCompatActivity {
 
         WebView webView = findViewById(R.id.webview);
         webView.loadUrl("https://www.jianshu.com/p/735a49865211");
+
+        openSecond();
+
+
+    }
+
+    public void openSecond() {
+        Button btn_open_second = findViewById(R.id.btn_open_second);
+        btn_open_second.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

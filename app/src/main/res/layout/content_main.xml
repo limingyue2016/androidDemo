@@ -18,10 +18,19 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_open_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="打开新界面"
+        tools:ignore="MissingConstraints" />
+
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="800px"
         app:layout_constraintBottom_toBottomOf="@+id/textView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
