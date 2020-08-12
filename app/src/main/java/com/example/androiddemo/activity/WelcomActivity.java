@@ -8,9 +8,8 @@ import android.os.Message;
 import com.example.androiddemo.R;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
-public class WelcomActivity extends AppCompatActivity {
+public class WelcomActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
