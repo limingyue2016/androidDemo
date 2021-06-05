@@ -26,18 +26,9 @@ jobs:
 
       - name: Releasing using Hub
         id: create_release
-#        uses: ShaunLWM/action-release-debugapk@master
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-#          APP_FOLDER: app
-#          RELEASE_TITLE: New Build
         uses: actions/create-release@master
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }} # 之前GitHub添加的Token
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
           APP_FOLDER: app
-        with:
-          tag_name: ${{ github.ref }} # (tag)标签名称
-          release_name: Release ${{ github.ref }}
-          draft: false # 是否是草稿
-          prerelease: false # 是否是预发布
+          RELEASE_TITLE: New Build
 
